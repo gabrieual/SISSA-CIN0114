@@ -168,3 +168,16 @@ logs
 nohup.out
 data
 results
+
+
+# [PROJETO] arquivos grandes
+*.pt
+*.pth
+*.pcap
+*.pcapng
+*.tar
+*.7z
+*.parquet
+
+# [PROJETO] tabelas e figuras finais
+!projeto/resultados/**
