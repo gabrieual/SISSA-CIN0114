@@ -16,7 +16,7 @@ Repositório original: <https://github.com/jamesnulliu/SISSA> (licença Apache-2
 
 ## O que este repositório acrescenta ao original
 
-1. **Reprodução** dos resultados do artigo (Tabelas III, IV e V; Figuras 10, 11 e 12) no dataset dos autores.
+1. **Reprodução** dos resultados do artigo (Tabelas III, IV e V; Figuras 10 a 13) no dataset dos autores.
 2. **Correções de avaliação**: conjunto de teste separado (70/10/20), curvas ROC calculadas com probabilidades, várias seeds e teste estatístico (McNemar).
 3. **Avaliação em outro dataset**: tráfego SOME/IP de Kim et al. (2026), com parser de pcap, rotulagem e geração de janelas no formato do SISSA.
 4. *(Se houver)* **Melhoria proposta** pela equipe. <!-- TODO: descrever -->
@@ -50,7 +50,7 @@ Todos os experimentos foram executados no Google Colab com GPU. Basta abrir os n
 
 | Notebook | O que faz | Abrir |
 | --- | --- | --- |
-| `projeto/notebooks/01_reproducao.ipynb` | Baixa o dataset original, treina os 6 modelos e gera as tabelas e figuras do artigo | <!-- TODO: link "Open in Colab" --> |
+| `projeto/notebooks/01_reproducao.ipynb` | Baixa o dataset original, treina os 6 modelos e gera as tabelas e figuras do artigo | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/getuliojql/SISSA-CIN0114/blob/main/projeto/notebooks/01_reproducao.ipynb) |
 | `projeto/notebooks/02_dataset_kim.ipynb` | Baixa os pcaps de Kim et al., gera as janelas e treina o SISSA | <!-- TODO --> |
 | `projeto/notebooks/03_melhoria.ipynb` | Treina e avalia a versão modificada | <!-- TODO --> |
 
@@ -63,7 +63,7 @@ Dados, pcaps e pesos **não** são versionados (ver `.gitignore`).
 
 ### Pesos treinados
 
-Os pesos (`.pt`) e logs de treino estão em: <!-- TODO: link da pasta do Drive com acesso "qualquer pessoa com o link" -->
+Os pesos (`.pt`), logs de treino e resultados de teste das 42 execuções da reprodução (6 modelos × 7 tamanhos de janela) estão nesta [pasta do Google Drive](https://drive.google.com/drive/folders/1eBpBZFx6wy3thsNgR7aSDtbx5jelqlHn), organizados em `weights/<modelo>_w<janela>/`, `train_log/` e `test_result/`.
 
 ## Alterações no código original
 
